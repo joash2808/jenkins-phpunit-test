@@ -5,9 +5,13 @@ pipeline {
 		}
 	}
 	stages {
-		stage('Build') {
+		stage('Checkout SCM') {
 			steps {
 				git '/home'
+			}
+		}
+		stage('Build') {
+			steps {
 				sh 'composer install'
 			}
 		}
