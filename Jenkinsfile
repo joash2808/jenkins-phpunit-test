@@ -7,6 +7,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
+				git '/home'
 				sh 'composer install'
 			}
 		}
